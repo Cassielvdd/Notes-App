@@ -18,14 +18,19 @@ export default function Home() {
   async function handleReg(e) {
     e.preventDefault();
     if (email !== "" && senha !== "") {
-      toast.success("Bem vindo");
       await signInWithEmailAndPassword(auth, email, senha)
         .then(() => {
           //navigate to admin
           navigate("/admin", { replace: true });
+          toast.success("Bem vindo");
         })
         .catch((error) => {
-          toast.warn("Erro ao logar" + error);
+          if (error.code === "auth/user-not-found") {
+            toast.error("User não cadastrado");
+          }
+          if (error.code === "auth/wrong-password") {
+            toast.error("Senha incorreta");
+          }
         });
     } else {
       toast.error("Preencha os campos");

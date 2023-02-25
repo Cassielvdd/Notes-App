@@ -83,7 +83,13 @@ export default function Admin() {
   }
   async function deleteTask(id) {
     const docRef = doc(db, "tarefas", id);
-    await deleteDoc(docRef);
+    await deleteDoc(docRef)
+      .then(() => {
+        toast.warn("Tarefa Removida");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
   async function editTak(item) {
     setTask(item.tarefa);

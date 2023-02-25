@@ -1,0 +1,93 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  height: 40px;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+header button {
+  border: none;
+  background-color: transparent;
+}
+header button svg {
+  font-size: 20px;
+  color: white;
+}
+.admin-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+.admin-form {
+  text-align: center;
+}
+.admin-form h1 {
+  margin-bottom: 10px;
+}
+.admin-form input {
+  width: 400px;
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
+.admin-form button {
+  background-color: transparent;
+  border: none;
+  color: #0e47f3;
+  margin-left: 10px;
+}
+.admin-form button svg {
+  font-size: 20px;
+}
+.inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 450px;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .inputs {
+    width: 300px;
+  }
+  .inputs input {
+    width: 250px;
+  }
+}
+.task {
+  margin-top: 50px;
+  width: 100%;
+  border: 1px solid #0e47f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 50px;
+  padding: 20px;
+  background-color: rgba(18, 18, 18, 0.38);
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.btn button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.btn-add svg {
+  color: white;
+  font-size: 20px;
+}
+.btn-remove svg {
+  color: red;
+  font-size: 25px;
+}
